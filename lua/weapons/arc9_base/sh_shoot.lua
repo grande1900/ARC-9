@@ -697,7 +697,7 @@ function SWEP:AfterShotFunction(tr, dmg, range, penleft, alreadypenned, secondar
 
     -- NPC damage nerf
     local owner = self:GetOwner()
-    if owner:IsNPC() and !arc9_npc_equality:GetBool() then
+    if (owner:IsNPC() or tr.Entity:IsNPC()) and !arc9_npc_equality:GetBool() then
         dmgv = dmgv * 0.25
     end
 
