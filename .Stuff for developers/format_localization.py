@@ -1,6 +1,8 @@
-BaseDir = input("Localization Directory/File prefix:\nExample: ../lua/arc9/common/localization/base_\n") # Example: ../lua/arc9/common/localization/base_
+BaseDir = input(
+    "Localization Directory/File prefix:\nExample: ../lua/arc9/common/localization/base_\n")  # Example: ../lua/arc9/common/localization/base_
 BaseFile = BaseDir + r"en.lua"
-ToBeFormatted = input("Languages:\nExample: de,es-es,ru,sv-se,uwu,zh-cn\n").split(",") # Example: de,es-es,ru,sv-se,uwu,zh-cn
+ToBeFormatted = input("Languages:\nExample: de,es-es,ru,sv-se,uwu,zh-cn\n").split(
+    ",")  # Example: de,es-es,ru,sv-se,uwu,zh-cn
 
 
 def makeTemplate():
@@ -15,10 +17,10 @@ def makeTemplate():
 
 
 for Lang in ToBeFormatted:
-    print("formatting "+Lang)
+    print("formatting " + Lang)
     Text = []
     FormattedText = makeTemplate()
-    with open(BaseDir+Lang+".lua", "r", encoding='utf-8') as f:
+    with open(BaseDir + Lang + ".lua", "r", encoding='utf-8') as f:
         Read = f.readlines()
     for i in range(len(Read)):
         if Read[i][:2] == "L[":
@@ -30,9 +32,9 @@ for Lang in ToBeFormatted:
                     i[1] = i[1] + " =" + j[1]
                     break
                 if j == Text[-1]:
-                    print(Lang+" missing string "+i[1])
-                    i[1] = "-- "+i[1]+" = \"PLEASE TRANSLATE\"\n"
-    with open(BaseDir+Lang+".lua", "w", encoding='utf-8') as f:
+                    print(Lang + " missing string " + i[1])
+                    i[1] = "-- " + i[1] + " = \"PLEASE TRANSLATE\"\n"
+    with open(BaseDir + Lang + ".lua", "w", encoding='utf-8') as f:
         for line in FormattedText:
             f.write(line[1])
     del Text[:]
