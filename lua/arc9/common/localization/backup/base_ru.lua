@@ -1,5 +1,7 @@
 L = {}
 
+--L["font"] = "Exo Regular"
+
 L["autostat.damagemax"] = "Урон вблизи"
 L["autostat.damagemin"] = "Урон на расстоянии"
 L["autostat.damagerand"] = "Разброс урона"
@@ -742,7 +744,3 @@ L["settings.hud_game.centerhint_reload_percent.title"] = "Процент маг�
 -- August 8th
 L["settings.hud_game.centerhint_reload.desc"] = "Display a reload tip when low on ammunition."
 L["settings.hud_game.centerhint_reload_percent.desc"] = "Display the reload tip when the current magazine is at this percentage value."
-
-
--- augusrt 14
-L["autostat.secondary.bipod"] = "на сошках"

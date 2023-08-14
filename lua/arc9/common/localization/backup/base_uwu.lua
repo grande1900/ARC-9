@@ -1,5 +1,7 @@
 L = {}
 
+--L["font"] = "Exo Regular"
+
 L["autostat.damagemax"] = "Clowose Wange Dawage"
 L["autostat.damagemin"] = "Lowong Wange Dawage"
 L["autostat.damagerand"] = "Dawage Owarawriance"
@@ -755,7 +757,3 @@ L["settings.hud_game.centerhint_reload_percent.title"] = "Magawine Pewcentwage"
 -- August 8th
 L["settings.hud_game.centerhint_reload.desc"] = "Display a reload tip when low on ammunition."
 L["settings.hud_game.centerhint_reload_percent.desc"] = "Display the reload tip when the current magazine is at this percentage value."
-
--- aug 14
-
-L["autostat.secondary.bipod"] = "on bipOwOd"
